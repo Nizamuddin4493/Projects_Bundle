@@ -1,1 +1,1 @@
-This is Nizamuddin’s first git project!
+This is Nizamuddin’s first git project.
