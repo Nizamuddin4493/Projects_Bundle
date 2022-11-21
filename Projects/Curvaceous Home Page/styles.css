@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: serif;
+  color: #fff;
+  background: #202731;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
+
+.blue {
+  background: #3c31dd;
+}
+
+.red {
+  background: #dd3f31;
+}
+
+.pink {
+  background: #ff0066;
+}
+
+.dark {
+  background: #0f0f10;
+}
+
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+
+.curve::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #202731;
+  transform: translate(85%, 60%);
+}
+
+.curve::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-4%, 40%);
+  z-index: 1;
+}
+
+.bubble::after {
+  content: '';
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  position: absolute;
+  bottom: 0;
+  height: 85%;
+  width: 100%;
+  background-color: #0f0f10;
+  z-index: -1;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(111% + 1.3px);
+  height: 169px;
+}
+
+.wave .shape-fill {
+  fill: #FFFFFF;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url('./layer1.svg');
+}
+
+.layer2 {
+  background-image: url('./layer2.svg');
+}
+
+.flip {
+  transform: rotate(180deg);
+}
